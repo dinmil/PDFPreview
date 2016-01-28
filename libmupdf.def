@@ -1,0 +1,60 @@
+LIBRARY libmupdf
+EXPORTS
+
+; Fitz exports variables
+
+	pdf_document_handler
+	xps_document_handler
+	cbz_document_handler
+	img_document_handler
+	tiff_document_handler
+	html_document_handler
+	epub_document_handler
+
+; Fitz exports functions
+	
+	fz_new_context_imp
+	fz_register_document_handler
+	fz_register_document_handlers
+	fz_new_document_handler_context
+	fz_drop_document_handler_context
+	
+	; fz_free_context is changed to fz_drop_context
+	; fz_close_document is changed to fz_drop_document
+	; fz_free_device is changed to fz_drop_device
+	; fz_free_page is changed to fz_drop_page
+
+	fz_open_document
+	fz_drop_document
+	fz_drop_context
+	fz_drop_device
+	fz_count_pages
+	fz_load_page
+	fz_drop_page
+	fz_load_page
+	fz_bound_page
+	fz_run_page
+	fz_new_draw_device
+	fz_rotate
+	fz_pre_scale
+	fz_lookup_device_colorspace
+	fz_pixmap_bbox
+	fz_pixmap_width
+	fz_pixmap_height
+	fz_new_pixmap
+	fz_new_pixmap_with_bbox
+	fz_new_pixmap_with_data
+	fz_new_pixmap_with_bbox_and_data	
+	fz_keep_pixmap
+	fz_drop_pixmap
+	fz_pixmap_colorspace
+	fz_pixmap_components
+	fz_pixmap_samples
+	fz_clear_pixmap_with_value
+	fz_clear_pixmap
+	fz_new_trace_device
+	fz_new_bbox_device
+	fz_new_draw_device_with_bbox
+	fz_needs_password
+	fz_authenticate_password
+	fz_transform_rect
